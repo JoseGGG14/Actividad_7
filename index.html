@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" href="estilo.css">
+    <title>Encuesta</title>
+</head>
+<body>
+    <nav id="menuPrincipal">
+        <h1>
+            <a class="opcionMenuPrincipal" href="index.html">¡ JavaScript !</a>
+        </h1>
+    </nav>
+    <section id="seccion">
+        <header>
+            <h1 id="titulo">Encuesta de Programación</h1>
+        </header>
+        <article>
+            <p>
+                <h4>¿Te Gusta Programar?</h4>
+                <input type="radio" name="opcion" @change="muestraPregunta(1)">Si
+                <input type="radio" name="opcion" @change="muestraPregunta(0)">No
+            </p>
+        <!--dibuja la caja de resultados cuando el usuario responda-->
+        <a v-if="mostrar" @click="muestraResultados">
+        </article>
+        <!--Dibujen una caja donde vacien los resultados-->
+        <article>
+            <h4 for="vue.years">¿Cuanto llevas Programando?</h4>
+            <input type="number" v-model="vue.years">
+        </article>
+        <article v-if="vue.years <2">
+            <h4 for="vue.years">¿Qué te motiva a programar?</h4>
+            <textarea type="number" id="tex"></textarea>
+        </article>
+        <article v-else-if="vue.years >=2">
+            <h4 for="vue.years">Cuentanos tu Experiancia Programando</h4>
+            <textarea type="text" id="tex"></textarea>
+        </article>
+        <article>
+        <h4>¿Cuantos Lenguajes de Programación Conoces?</h4>
+            <input type="text" v-model="apellido" @keyup.enter="agregar()">
+            <button @click="agregar()">Agregar Lenguaje</button>
+            <ul>
+                <li id="res" v-for="(ape, index) in apellidos" :key="index">{{ ape }}</li>
+            </ul>
+        </article>
+    </a>
+    <span v-else class="mensaje">{{mensaje}}</span>
+    </section>
+
+    <script src="vue.js"></script>
+    <script src="modelo.js"></script>
+
+    <section id="seccion2">
+            <h3>Por: José Guadalupe Gómez Gómez &copy; 2021</h3>
+    </section>
+
+</body>
+</html>

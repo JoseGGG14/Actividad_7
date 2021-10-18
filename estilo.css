@@ -1,0 +1,68 @@
+.mensaje{
+    color: blue;
+}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+html{
+    font-size: 16px;
+}
+body{
+    font-size: 0px;
+    background:url(espacio.jpg) no-repeat center fixed;
+    background-size: cover;
+    padding-top: 50px;
+}
+#titulo{
+    text-align: center;
+}
+#menuPrincipal{
+    background-color: black;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+}
+.opcionMenuPrincipal{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 50px;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.5rem;
+}
+   .opcionMenuPrincipal:hover{
+    background-color: orange;
+   }
+#tex{
+    width: 300px;
+    height: 60px;
+}
+#seccion{
+    width: 500px;
+    height: 500px;
+    background-color: greenyellow;
+    position: relative;
+    padding: 10px;
+    border:solid 1px orange;
+    margin: 10px auto;
+    text-align: left;
+    font-size: 1.5rem;
+}
+#seccion2{
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 0.9rem;
+}
+h3{
+    width: 100%;
+    color: white;
+    text-align: center;
+}
